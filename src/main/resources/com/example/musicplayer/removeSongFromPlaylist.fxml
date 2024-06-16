@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="window" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.musicplayer.RemoveSongFromPlaylist"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label layoutX="26.0" layoutY="14.0" prefHeight="17.0" prefWidth="308.0" text="Выберите песню, которую хотите удалить из плейлиста" />
+        <ScrollPane layoutX="18.0" layoutY="39.0" prefHeight="321.0" prefWidth="324.0">
+            <content>
+                <VBox fx:id="SongsToRemove" prefHeight="318.0" prefWidth="322.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onLoad" prefHeight="25.0" prefWidth="322.0" text="Показать список песен" />
+                    </children>
+                </VBox>
+            </content></ScrollPane>
+    </children>
+</AnchorPane>

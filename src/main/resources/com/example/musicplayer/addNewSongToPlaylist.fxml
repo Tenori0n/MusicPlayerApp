@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="window" prefHeight="400.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicplayer.AddNewSongToPlaylist">
+    <children>
+        <Label layoutX="26.0" layoutY="14.0" prefHeight="17.0" prefWidth="308.0" text="Выберите песню, которую хотите добавить в плейлист" />
+        <ScrollPane layoutX="18.0" layoutY="39.0" prefHeight="321.0" prefWidth="324.0">
+            <content>
+                <VBox fx:id="SongsToAdd" prefHeight="318.0" prefWidth="322.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onLoad" prefHeight="25.0" prefWidth="322.0" text="Показать список песен" />
+                    </children>
+                </VBox>
+            </content></ScrollPane>
+    </children>
+</AnchorPane>

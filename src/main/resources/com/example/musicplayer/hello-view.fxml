@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="Source" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicplayer.HelloController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <Label fx:id="welcomeText" layoutX="35.0" layoutY="11.0" prefHeight="39.0" prefWidth="331.0" text="Сейчас играет: " />
+  <Button layoutX="38.0" layoutY="450.0" onAction="#addNewSongsToPlayer" prefHeight="39.0" prefWidth="160.0" text="Добавить песни в плеер" />
+   <Button layoutX="206.0" layoutY="450.0" onAction="#removeSongFromPlayer" prefHeight="39.0" prefWidth="160.0" text="Удалить песни из плеера" />
+   <Label layoutX="88.0" layoutY="113.0" text="Плейлисты" />
+   <ScrollPane layoutX="38.0" layoutY="135.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="300.0" prefWidth="160.0">
+      <content>
+         <VBox fx:id="Playlists" prefHeight="300.0" prefWidth="145.0">
+            </VBox>
+      </content></ScrollPane>
+   <Label layoutX="233.0" layoutY="113.0" text="Песни плейлиста" />
+   <ScrollPane layoutX="206.0" layoutY="135.0" prefHeight="300.0" prefWidth="160.0">
+      <content>
+         <VBox fx:id="PlaylistsSongs" prefHeight="300.0" prefWidth="145.0" />
+      </content>
+   </ScrollPane>
+   <Button fx:id="playbutton" layoutX="142.0" layoutY="63.0" mnemonicParsing="false">
+      <graphic>
+         <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../img/playbutton.png" />
+            </image></ImageView>
+      </graphic></Button>
+   <Button fx:id="nextTrack" layoutX="199.0" layoutY="63.0" mnemonicParsing="false" onAction="#nextSong">
+      <graphic>
+         <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../img/nexttrack.png" />
+            </image></ImageView>
+      </graphic>
+   </Button>
+   <Button fx:id="prevTrack" layoutX="84.0" layoutY="63.0" mnemonicParsing="false" onAction="#prevSong">
+      <graphic>
+         <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../img/previoustrack.png" />
+            </image></ImageView>
+      </graphic>
+   </Button>
+   <CheckBox fx:id="repeat" layoutX="258.0" layoutY="72.0" mnemonicParsing="false" text="Повтор песни" />
+</Pane>
