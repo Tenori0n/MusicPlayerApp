@@ -85,6 +85,11 @@ public class RemoveSongFromPlaylist {
         FXMLLoader a = new FXMLLoader(getClass().getResource("hello-view.fxml"));
         a.load();
         HelloController b = a.getController();
+        if (song.equals(MPlayer.getCurrentSong()))
+        {
+            MPlayer.setCurrentPlaylist(null);
+            MPlayer.setCurrentSong(null);
+        }
         b.musicPlayer = MPlayer;
         Stage exit = (Stage) window.getScene().getWindow();
         exit.close();

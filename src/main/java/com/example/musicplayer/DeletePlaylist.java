@@ -13,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class DeletePlaylist {
-    MP MPlayer;
+    public MP MPlayer;
     @FXML
     private VBox PlaylistsToDelete;
     @FXML
@@ -33,6 +33,10 @@ public class DeletePlaylist {
         FXMLLoader b = new FXMLLoader(getClass().getResource("hello-view.fxml"));
         b.load();
         HelloController c = b.getController();
+        if (a.equals(MPlayer.getCurrentPlaylist())) {
+            MPlayer.setCurrentPlaylist(null);
+            MPlayer.setCurrentSong(null);
+        }
         c.musicPlayer = MPlayer;
         Stage exit = (Stage) window.getScene().getWindow();
         exit.close();

@@ -76,7 +76,6 @@ public class AddNewSongsToPlayer {
             newSong.setSongName(name);
         }
         newSong.setPaz(System.getProperty("user.dir") + "\\Resources" + "\\Songs\\" + newSong.getAuthor() + " -- " + newSong.getSongName() + ".mp3");
-        newSong.setDuration((int)(new Media(new File(newSong.getPaz()).toURI().toString()).getDuration().toSeconds()));
         try {
             Files.copy(Paths.get(System.getProperty("user.dir"), "Resources", "NewSongs", fileName), Paths.get(System.getProperty("user.dir"), "Resources", "Songs", newSong.getAuthor() + " -- " + newSong.getSongName() + ".mp3"));
         }
@@ -84,6 +83,7 @@ public class AddNewSongsToPlayer {
         {
             throw e;
         }
+        newSong.setDuration((int)(new Media(new File(newSong.getPaz()).toURI().toString()).getDuration().toSeconds()));
         FXMLLoader a = new FXMLLoader(getClass().getResource("hello-view.fxml"));
         a.load();
         HelloController b = a.getController();

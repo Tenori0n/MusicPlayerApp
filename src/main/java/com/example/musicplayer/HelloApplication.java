@@ -18,8 +18,6 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        /*MP NewMP = new MP();
-        NewMP.Menu();*/
         launch();
     }
 }
